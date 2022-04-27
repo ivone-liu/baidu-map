@@ -1,0 +1,20 @@
+{
+    "name": "ivone/baidu-map",
+    "description": "百度地图组件",
+    "authors": [
+        {
+            "name": "ivone",
+            "email": "i@ivone.me"
+        }
+    ],
+    "require": {
+        "guzzlehttp/guzzle": "^7.0.1",
+        "php": ">=7.0"
+    },
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "BaiduMap\\": "src/"
+        }
+    }
+}
