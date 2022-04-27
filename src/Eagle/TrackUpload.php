@@ -38,8 +38,8 @@ class TrackUpload
             'ak'                =>  $this->ak,
             'service_id'        =>  $this->service_id,
             'entity_name'       =>  $this->entity,
-            'latitude'          =>  $point[0],
-            'longitude'         =>  $point[1],
+            'latitude'          =>  $point[1],
+            'longitude'         =>  $point[0],
             'loc_time'          =>  $time,
             'coord_type_input'  =>  $coord
         ];
@@ -69,9 +69,7 @@ class TrackUpload
 
     protected function send(Array $package) {
         $http_client = new Client();
-        $baidu_resp = $http_client->request('POST', $this->req_url, [
-            'form_params' =>    $package
-        ]);
+        $baidu_resp = $http_client->request('POST', $this->req_url, $package);
         return $baidu_resp;
     }
 
