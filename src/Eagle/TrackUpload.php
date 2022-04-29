@@ -68,9 +68,14 @@ class TrackUpload
 
 
     protected function send(Array $package) {
-        $http_client = new Client();
-        $baidu_resp = $http_client->request('POST', $this->req_url, $package);
-        return $baidu_resp;
+        $ch = curl_init();
+        curl_setopt($ch, CURLOPT_URL, $this->req_url);
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+        curl_setopt($ch, CURLOPT_POST, 1);
+        curl_setopt($ch, CURLOPT_POSTFIELDS, $package);
+        $package = curl_exec($ch);
+        curl_close($ch);
+        return $package;
     }
 
 }
