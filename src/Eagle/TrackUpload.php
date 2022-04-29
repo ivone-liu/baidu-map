@@ -18,7 +18,8 @@ class TrackUpload
     protected $service_id;
     protected $entity;
 
-    private $req_url = "http://yingyan.baidu.com/api/v3/track/addpoints";
+    private $req_single_url = "http://yingyan.baidu.com/api/v3/track/addpoint";
+    private $req_mutil_url = "http://yingyan.baidu.com/api/v3/track/addpoints";
 
     public function __construct($ak, $service_id, $entity) {
         $this->ak = $ak;
@@ -69,7 +70,7 @@ class TrackUpload
 
     protected function send(Array $package) {
         $ch = curl_init();
-        curl_setopt($ch, CURLOPT_URL, $this->req_url);
+        curl_setopt($ch, CURLOPT_URL, $this->req_single_url);
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
         curl_setopt($ch, CURLOPT_POST, 1);
         curl_setopt($ch, CURLOPT_POSTFIELDS, $package);
