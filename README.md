@@ -1,7 +1,6 @@
 # 百度地图鹰眼
 
-<img src="https://img.shields.io/badge/status-testing-orange">
-<img src="https://img.shields.io/badge/php-7.4-brightgreen">
+<img src="https://img.shields.io/badge/status-testing-orange">  <img src="https://img.shields.io/badge/php-7.4-brightgreen">
 
 
 ## 概念说明
