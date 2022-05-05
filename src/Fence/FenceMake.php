@@ -37,7 +37,7 @@ class FenceMake
      * @return bool|string
      */
     public function CreatePolygen($vertexes, $fence_name = '', $coord_type = 'wgs84') {
-        $baidu_resp = curl_send($this->polygen_fence_url, [
+        $baidu_resp = curl_post($this->polygen_fence_url, [
             'ak'            =>  $this->ak,
             'service_id'    =>  $this->service_id,
             'fence_name'    =>  $fence_name,

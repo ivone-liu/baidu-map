@@ -33,7 +33,7 @@ class FenceUpdate
      * @return bool|string
      */
     public function UpdatePolygen($fence_id, $fence_name, $vertexes, $coord_type) {
-        $baidu_resp = curl_send($this->polygon_fence_url, [
+        $baidu_resp = curl_post($this->polygon_fence_url, [
             'ak'            =>  $this->ak,
             'service_id'    =>  $this->service_id,
             'fence_id'      =>  $fence_id,

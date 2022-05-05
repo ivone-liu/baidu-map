@@ -30,7 +30,7 @@ class FenceDelete
      * @return mixed
      */
     public function DeleteFences(Array $fence_ids) {
-        $baidu_resp = curl_send($this->del_url, [
+        $baidu_resp = curl_post($this->del_url, [
             'ak'             =>  $this->ak,
             'service_id'     =>  $this->service_id,
             'fence_ids'      =>  implode(",", $fence_ids)

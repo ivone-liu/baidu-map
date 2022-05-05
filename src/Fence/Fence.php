@@ -30,7 +30,7 @@ class Fence
      * @return mixed
      */
     public function GetFences(Array $fence_ids) {
-        $baidu_resp = curl_send($this->fence_url, [
+        $baidu_resp = curl_get($this->fence_url, [
             'ak'             =>  $this->ak,
             'service_id'     =>  $this->service_id,
             'fence_ids'      =>  implode(",", $fence_ids)
