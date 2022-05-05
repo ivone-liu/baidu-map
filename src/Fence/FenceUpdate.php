@@ -6,7 +6,7 @@
  * Time: 11:22
  */
 
-namespace Fence\Eagle;
+namespace BaiduMap\Fence;
 
 class FenceUpdate
 {

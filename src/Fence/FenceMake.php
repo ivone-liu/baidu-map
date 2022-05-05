@@ -1,6 +1,6 @@
 <?php
 
-namespace Fence\Eagle;
+namespace BaiduMap\Fence;
 
 /**
  * Desc:
