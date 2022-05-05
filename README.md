@@ -2,6 +2,19 @@
 
 <img src="https://img.shields.io/badge/status-testing-orange">  <img src="https://img.shields.io/badge/php-7.4-brightgreen">
 
+## 介绍
+
+提供百度地图鹰眼相关服务的封装，如果对鹰眼不了解，请先了解[百度鹰眼](https://lbsyun.baidu.com/products/products/yingyan)。
+
+本包没有引用其他第三方依赖，不会与依赖较多的项目产生版本上的冲突。
+
+## 安装
+
+推荐使用composer安装
+
+```shell
+composer require ivone/baidu-map
+```
 
 ## 概念说明
 
