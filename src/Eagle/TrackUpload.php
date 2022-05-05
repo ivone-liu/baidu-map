@@ -43,7 +43,7 @@ class TrackUpload
             'loc_time'          =>  $time,
             'coord_type_input'  =>  $coord
         ];
-        return curl_send($package);
+        return curl_send($this->req_single_url, $package);
     }
 
     /**
