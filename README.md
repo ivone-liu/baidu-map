@@ -77,18 +77,25 @@ $fences = $all->GetFences($fence_ids);
 
 #### 绑定监控对象
 
-```php
+**注意**
 
+$entities 格式为Array [$entity1, $entity2]
+
+```php
+$add = new AddMonitor($ak, $service_id);
+$add->Add($fence_id, $entities);
 ```
 
 #### 删除监控对象
 
 ```php
-
+$add = new DelMonitor($ak, $service_id);
+$add->DelMonitor($fence_id, $entities);
 ```
 
 #### 读取监控对象
 
 ```php
-
+$add = new Monitor($ak, $service_id);
+$add->GetMonitors($fence_id);
 ```
