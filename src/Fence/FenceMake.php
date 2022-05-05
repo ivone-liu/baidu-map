@@ -44,7 +44,7 @@ class FenceMake
             'vertexes'      =>  $vertexes,
             'coord_type'    =>  $coord_type
         ]);
-        return $baidu_resp;
+        return json_decode($baidu_resp, true);
     }
 
 }

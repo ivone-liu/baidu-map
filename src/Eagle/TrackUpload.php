@@ -43,7 +43,8 @@ class TrackUpload
             'loc_time'          =>  $time,
             'coord_type_input'  =>  $coord
         ];
-        return curl_send($this->req_single_url, $package);
+        $baidu_resp = curl_send($this->req_single_url, $package);
+        return json_decode($baidu_resp, true);
     }
 
     /**
