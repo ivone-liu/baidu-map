@@ -26,14 +26,14 @@ class Fence
      * Author: Ivone <i@ivone.me>
      * Date: 2022/5/5
      * Time: 13:49
-     * @param array $fense_ids
+     * @param array $fence_ids
      * @return mixed
      */
-    public function GetFenses(Array $fense_ids) {
+    public function GetFences(Array $fence_ids) {
         $baidu_resp = curl_send($this->fence_url, [
             'ak'             =>  $this->ak,
             'service_id'     =>  $this->service_id,
-            'fence_ids'      =>  implode(",", $fense_ids)
+            'fence_ids'      =>  implode(",", $fence_ids)
         ]);
         return json_decode($baidu_resp, true);
     }
