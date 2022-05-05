@@ -1,6 +1,6 @@
 # 百度地图鹰眼
 
-<img src="https://img.shields.io/badge/status-testing-orange">  <img src="https://img.shields.io/badge/php-7.4-brightgreen">
+<img src="https://img.shields.io/badge/status-testing-orange">  <img src="https://img.shields.io/badge/php-7.4-brightgreen">  <a href="https://www.ivone.me"><img src="https://img.shields.io/badge/author-Ivone-blue"></a>
 
 ## 介绍
 
@@ -10,7 +10,7 @@
 
 ## 安装
 
-推荐使用composer安装
+推荐使用[composer](https://packagist.org/packages/ivone/baidu-map)安装
 
 ```shell
 composer require ivone/baidu-map
