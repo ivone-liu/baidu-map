@@ -8,7 +8,6 @@
 
 namespace BaiduMap\Eagle;
 
-
 use GuzzleHttp\Client;
 
 class TrackUpload
@@ -44,7 +43,7 @@ class TrackUpload
             'loc_time'          =>  $time,
             'coord_type_input'  =>  $coord
         ];
-        return $this->send($package);
+        return curl_send($package);
     }
 
     /**
@@ -68,15 +67,6 @@ class TrackUpload
     protected function buildPackage(&$package) {}
 
 
-    protected function send(Array $package) {
-        $ch = curl_init();
-        curl_setopt($ch, CURLOPT_URL, $this->req_single_url);
-        curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-        curl_setopt($ch, CURLOPT_POST, 1);
-        curl_setopt($ch, CURLOPT_POSTFIELDS, $package);
-        $package = curl_exec($ch);
-        curl_close($ch);
-        return $package;
-    }
+
 
 }
