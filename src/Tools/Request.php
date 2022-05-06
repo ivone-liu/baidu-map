@@ -25,3 +25,11 @@ function curl_get($url, Array $package) {
     curl_close($curl);
     return $res;
 }
+
+function download($url, $path = './storage/') {
+    $file_info = parse_url($url);
+    $name = basename($file_info['path']);
+    $file=file_get_contents($url);
+    file_put_contents($path.$name, $file);
+    return $path.$name;
+}

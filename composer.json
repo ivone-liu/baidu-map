@@ -16,7 +16,8 @@
             "BaiduMap\\": "src/"
         },
         "files": [
-            "src/Tools/Request.php"
+            "src/Tools/Request.php",
+            "src/Tools/Response.php"
         ]
     }
 }

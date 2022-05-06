@@ -27,7 +27,7 @@ class Monitor
             'service_id'        =>  $this->service_id,
             'fence_id'          =>  $fence_id
         ]);
-        return json_decode($baidu_resp, true);
+        return callbackResponse($baidu_resp);
     }
 
 }

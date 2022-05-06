@@ -35,7 +35,7 @@ class FenceDelete
             'service_id'     =>  $this->service_id,
             'fence_ids'      =>  implode(",", $fence_ids)
         ]);
-        return json_decode($baidu_resp, true);
+        return callbackResponse($baidu_resp);
     }
 
 }

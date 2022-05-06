@@ -44,7 +44,7 @@ class TrackUpload
             'coord_type_input'  =>  $coord
         ];
         $baidu_resp = curl_post($this->req_single_url, $package);
-        return json_decode($baidu_resp, true);
+        return callbackResponse($baidu_resp);
     }
 
     /**

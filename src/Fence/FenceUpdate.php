@@ -41,7 +41,7 @@ class FenceUpdate
             'vertexes'      =>  $vertexes,
             'coord_type'    =>  $coord_type
         ]);
-        return json_decode($baidu_resp, true);
+        return callbackResponse($baidu_resp);
     }
 
 }

@@ -28,7 +28,7 @@ class DelMonitor
             'fence_id'          =>  $fence_id,
             'monitored_person'  =>  implode(',', $entity)
         ]);
-        return json_decode($baidu_resp, true);
+        return callbackResponse($baidu_resp);
     }
 
 
