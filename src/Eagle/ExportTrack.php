@@ -16,7 +16,7 @@ class ExportTrack
 
     private $create_job_url = "http://yingyan.baidu.com/api/v3/export/createjob";
 
-    public function __construct($ak, $service_id, $entity) {
+    public function __construct($ak, $service_id) {
         $this->ak = $ak;
         $this->service_id = $service_id;
     }
@@ -36,7 +36,7 @@ class ExportTrack
             'ak'                =>  $this->ak,
             'service_id'        =>  $this->service_id
         ]);
-        $resp = callbackResponse($baidu_resp);
+        return callbackResponse($baidu_resp);
         if ($resp['total'] < 1) {
             return;
         }
