@@ -33,7 +33,7 @@ class ExportTrack
     }
 
     public function GetExportJob($job_id) {
-        $baidu_resp = curl_post($this->get_job_url, [
+        $baidu_resp = curl_get($this->get_job_url, [
             'ak'                =>  $this->ak,
             'service_id'        =>  $this->service_id
         ]);
