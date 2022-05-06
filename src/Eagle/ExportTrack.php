@@ -15,6 +15,7 @@ class ExportTrack
     protected $service_id;
 
     private $create_job_url = "http://yingyan.baidu.com/api/v3/export/createjob";
+    private $get_job_url = "http://yingyan.baidu.com/api/v3/export/getjob";
 
     public function __construct($ak, $service_id) {
         $this->ak = $ak;
@@ -32,7 +33,7 @@ class ExportTrack
     }
 
     public function GetExportJob($job_id) {
-        $baidu_resp = curl_post($this->create_job_url, [
+        $baidu_resp = curl_post($this->get_job_url, [
             'ak'                =>  $this->ak,
             'service_id'        =>  $this->service_id
         ]);
