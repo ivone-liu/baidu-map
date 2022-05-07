@@ -52,8 +52,9 @@ class ExportTrack
         return $file;
     }
 
-    protected function HandleJob($url) {
+    public function HandleJob($url) {
         $local_file = download($url);
+        return $local_file;
     }
 
 }
