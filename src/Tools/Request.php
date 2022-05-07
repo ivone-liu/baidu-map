@@ -27,6 +27,9 @@ function curl_get($url, Array $package) {
 }
 
 function download($url, $path = './storage/baidu-map/') {
+    if (!is_dir($path)) {
+        mkdir($path, 0777, true);
+    }
     $file_info = parse_url($url);
     $name = basename($file_info['path']);
     $file=file_get_contents($url);
