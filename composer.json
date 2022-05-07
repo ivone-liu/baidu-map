@@ -1,10 +1,13 @@
 {
     "name": "ivone/baidu-map",
     "description": "百度地图 - 鹰眼相关组件",
+    "keywords": ["百度地图","鹰眼","百度"],
     "authors": [
         {
             "name": "ivone",
-            "email": "i@ivone.me"
+            "email": "i@ivone.me",
+            "homepage": "https://www.ivone.me",
+            "role": "Developer"
         }
     ],
     "require": {
