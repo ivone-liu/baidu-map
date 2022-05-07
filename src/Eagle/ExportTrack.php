@@ -27,7 +27,8 @@ class ExportTrack
             'ak'                =>  $this->ak,
             'service_id'        =>  $this->service_id,
             'start_time'        =>  $start_time,
-            'end_time'          =>  $end_time
+            'end_time'          =>  $end_time,
+            'coord_type_output' =>  $coord_type_output
         ]);
         return callbackResponse($baidu_resp);
     }
@@ -37,7 +38,7 @@ class ExportTrack
             'ak'                =>  $this->ak,
             'service_id'        =>  $this->service_id
         ]);
-        return callbackResponse($baidu_resp);
+        $resp = callbackResponse($baidu_resp);
         if ($resp['total'] < 1) {
             return;
         }
