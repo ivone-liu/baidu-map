@@ -20,7 +20,8 @@
         },
         "files": [
             "src/Tools/Request.php",
-            "src/Tools/Response.php"
+            "src/Tools/Response.php",
+            "src/Tools/Tools.php"
         ]
     }
 }

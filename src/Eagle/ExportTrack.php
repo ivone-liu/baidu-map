@@ -54,7 +54,19 @@ class ExportTrack
 
     public function HandleJob($url) {
         $local_file = download($url);
-        return $local_file;
+        $exist_file = getDirFiles();
+        unzip($local_file);
+        $new_files = getDirFiles();
+        $unzip_files = array_diff($new_files, $exist_file);
+        $data = [];
+        foreach ($unzip_files as $item) {
+            $data[$item] = [
+                'name'      =>  $item,
+                'path'      =>  './storage/baidu-map/extract/',
+                'detail'    =>  readFile($item)
+            ];
+        }
+        return $data;
     }
 
 }
