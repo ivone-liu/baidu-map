@@ -52,6 +52,6 @@ function getDirFiles($extract_path = './storage/baidu-map/extract/') {
  * @param $file_path
  * @return false|string
  */
-function readFile($file, $file_path = './storage/baidu-map/extract/') {
+function fileRead($file, $file_path = './storage/baidu-map/extract/') {
     return file_get_contents($file_path.$file);
 }

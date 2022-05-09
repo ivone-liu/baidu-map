@@ -63,7 +63,7 @@ class ExportTrack
             $data[$item] = [
                 'name'      =>  $item,
                 'path'      =>  './storage/baidu-map/extract/',
-                'detail'    =>  readFile($item)
+                'detail'    =>  fileRead($item)
             ];
         }
         return $data;
