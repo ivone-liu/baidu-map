@@ -1,5 +1,6 @@
 <?php
 
+// POST请求
 function curl_post($url, Array $package) {
     $ch = curl_init();
     curl_setopt($ch, CURLOPT_URL, $url);
@@ -11,6 +12,7 @@ function curl_post($url, Array $package) {
     return $package;
 }
 
+// GET请求
 function curl_get($url, Array $package) {
     $params = "";
     foreach ($package as $key=>$item) {
@@ -26,6 +28,7 @@ function curl_get($url, Array $package) {
     return $res;
 }
 
+// 文件下载
 function download($url, $path = './storage/baidu-map/') {
     if (!is_dir($path)) {
         mkdir($path, 0777, true);

@@ -8,6 +8,16 @@
 
 namespace BaiduMap\Eagle;
 
+/**
+ * Desc: 轨迹查询
+ *       https://lbsyun.baidu.com/index.php?title=yingyan/api/v3/trackprocess
+ * Author: Ivone <i@ivone.me>
+ * Date: 2022/5/10
+ * Time: 16:55
+ * Trait Track
+ * Class Track
+ * @package BaiduMap\Eagle
+ */
 class Track
 {
 

@@ -10,6 +10,16 @@ namespace BaiduMap\Eagle;
 
 use GuzzleHttp\Client;
 
+/**
+ * Desc: 轨迹上传
+ *       https://lbsyun.baidu.com/index.php?title=yingyan/api/v3/trackupload
+ * Author: Ivone <i@ivone.me>
+ * Date: 2022/5/10
+ * Time: 16:55
+ * Trait TrackUpload
+ * Class TrackUpload
+ * @package BaiduMap\Eagle
+ */
 class TrackUpload
 {
 

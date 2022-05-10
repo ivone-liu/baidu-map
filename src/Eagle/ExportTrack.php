@@ -8,6 +8,16 @@
 
 namespace BaiduMap\Eagle;
 
+/**
+ * Desc: 批量导出轨迹
+ *       https://lbsyun.baidu.com/index.php?title=yingyan/api/v3/trackexport
+ * Author: Ivone <i@ivone.me>
+ * Date: 2022/5/10
+ * Time: 16:54
+ * Trait ExportTrack
+ * Class ExportTrack
+ * @package BaiduMap\Eagle
+ */
 class ExportTrack
 {
 

@@ -8,6 +8,16 @@
 
 namespace BaiduMap\Eagle;
 
+/**
+ * Desc: 轨迹查询 - 获取轨迹里程
+ *       https://lbsyun.baidu.com/index.php?title=yingyan/api/v3/trackprocess
+ * Author: Ivone <i@ivone.me>
+ * Date: 2022/5/10
+ * Time: 16:54
+ * Trait Distance
+ * Class Distance
+ * @package BaiduMap\Eagle
+ */
 class Distance
 {
 

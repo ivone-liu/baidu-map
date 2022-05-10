@@ -3,10 +3,14 @@
 namespace BaiduMap\Fence;
 
 /**
- * Desc:
+ * Desc: 地理围栏管理 - 创建围栏
+ *       https://lbsyun.baidu.com/index.php?title=yingyan/api/v3/geofence
  * Author: Ivone <i@ivone.me>
- * Date: 2022/5/5
- * Time: 10:49
+ * Date: 2022/5/10
+ * Time: 16:56
+ * Trait AddMonitor
+ * Class AddMonitor
+ * @package BaiduMap\Fence
  */
 class FenceMake
 {

@@ -8,9 +8,18 @@
 
 namespace BaiduMap\Fence;
 
+/**
+ * Desc: 地理围栏管理 - 查询围栏信息
+ *       https://lbsyun.baidu.com/index.php?title=yingyan/api/v3/geofence
+ * Author: Ivone <i@ivone.me>
+ * Date: 2022/5/10
+ * Time: 16:56
+ * Trait AddMonitor
+ * Class AddMonitor
+ * @package BaiduMap\Fence
+ */
 class Fence
 {
-
     protected $ak;
     protected $service_id;
 

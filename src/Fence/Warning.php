@@ -8,6 +8,16 @@
 
 namespace BaiduMap\Fence;
 
+/**
+ * Desc: 地理围栏报警
+ *       https://lbsyun.baidu.com/index.php?title=yingyan/api/v3/geofencealarm
+ * Author: Ivone <i@ivone.me>
+ * Date: 2022/5/10
+ * Time: 16:56
+ * Trait AddMonitor
+ * Class AddMonitor
+ * @package BaiduMap\Fence
+ */
 class Warning {
 
     protected $ak;
