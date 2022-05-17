@@ -32,6 +32,9 @@ function unzip($zip_file, $extract_path = './storage/baidu-map/extract/') {
  * @return array
  */
 function getDirFiles($extract_path = './storage/baidu-map/extract/') {
+    if (!is_dir($extract_path)) {
+        mkdir($extract_path, 0777, true);
+    }
     $files = [];
     $handler = opendir($extract_path);
     while (($filename = readdir($handler)) !== false) {
