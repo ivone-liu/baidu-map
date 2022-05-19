@@ -63,19 +63,22 @@ class ExportTrack
     }
 
     public function HandleJob($url) {
-        $local_file = download($url);
-        $exist_file = getDirFiles();
-        unzip($local_file);
-        $new_files = getDirFiles();
-        $unzip_files = array_diff($new_files, $exist_file);
-        $data = [];
-        foreach ($unzip_files as $item) {
-            $data[$item] = [
-                'name'      =>  $item,
-                'path'      =>  './storage/baidu-map/extract/',
-                'detail'    =>  fileRead($item)
-            ];
+        $preg = "/\S+\/(\S+)\.zip.*/";
+        preg_match($preg, $url, $file_name);
+        $zip_file = $file_name[1] . ".zip";
+        $json_file = $file_name[1] . ".json";
+        if (!file_exists('./storage/baidu-map/'.$zip_file)) {
+            download($url);
         }
+        if (!file_exists('./storage/baidu-map/'.$json_file)) {
+            unzip($zip_file);
+        }
+        $data = [
+            'name'      =>  $json_file,
+            'path'      =>  './storage/baidu-map/extract/',
+            'detail'    =>  fileRead($json_file)
+        ];
+
         return $data;
     }
 
