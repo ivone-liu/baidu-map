@@ -23,7 +23,7 @@ class Warning {
     protected $ak;
     protected $service_id;
 
-    private $query_status_url = "http://yingyan.baidu.com/api/v3/fence/listmonitoredperson";
+    private $query_status_url = "http://yingyan.baidu.com/api/v3/fence/querystatus";
 
     public function __construct($ak, $service_id) {
         $this->ak = $ak;
