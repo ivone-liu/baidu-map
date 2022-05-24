@@ -35,7 +35,12 @@ function download($url, $path = './storage/baidu-map/') {
     }
     $file_info = parse_url($url);
     $name = basename($file_info['path']);
-    $file=file_get_contents($url);
-    file_put_contents($path.$name, $file);
-    return $path.$name;
+    try {
+        $file=file_get_contents($url);
+        file_put_contents($path.$name, $file);
+        return [1, $path.$name];
+    } catch (\Exception $e) {
+        return [0, $e->getMessage()];
+    }
+
 }

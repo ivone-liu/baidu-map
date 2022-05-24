@@ -68,7 +68,10 @@ class ExportTrack
         $zip_file = $file_name[1] . ".zip";
         $json_file = $file_name[1] . ".json";
         if (!file_exists('./storage/baidu-map/'.$zip_file)) {
-            download($url);
+            $download = download($url);
+            if ($download[0] == 0) {
+                return $download[1];
+            }
         }
         if (!file_exists('./storage/baidu-map/'.$json_file)) {
             unzip($zip_file);
