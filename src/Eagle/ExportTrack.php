@@ -73,7 +73,7 @@ class ExportTrack
                 return $download[1];
             }
         }
-        if (!file_exists('./storage/baidu-map/'.$json_file)) {
+        if (!file_exists('./storage/baidu-map/extract/'.$json_file)) {
             unzip($zip_file);
         }
         $data = [
