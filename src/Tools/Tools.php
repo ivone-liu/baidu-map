@@ -9,12 +9,12 @@
  * @param $extract_path 解压路径
  * @return int|boolean
  */
-function unzip($zip_file, $extract_path = './storage/baidu-map/extract/') {
+function unzip($zip_file, $extract_path = './storage/baidu-map/extract/', $file_path = './storage/baidu-map/') {
     if (!is_dir($extract_path)) {
         mkdir($extract_path, 0777, true);
     }
     $zip = new ZipArchive();
-    if($zip->open($zip_file) === true) {
+    if($zip->open($file_path . $zip_file) === true) {
         $zip->extractTo($extract_path);
         $zip->close();
         return 1;
