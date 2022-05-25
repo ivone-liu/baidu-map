@@ -23,7 +23,7 @@ class Rectify
         $baidu_resp = curl_post($this->track_url, [
             'ak'                =>  $this->ak,
             'rectify_option'    =>  "need_mapmatch:1|transport_mode:driving|denoise_grade:1|vacuate_grade:1",
-            'monitored_person'  =>  json_encode($ponits)
+            'point_list'        =>  json_encode($ponits)
         ]);
         return callbackResponse($baidu_resp);
     }
