@@ -21,8 +21,9 @@ class BaiduMap
 
     protected $rectify;
 
-    public function __construct(Rectify $rectify) {
-        $this->rectify = $rectify;
+    public function __construct() {
+        $this->rectify = new Rectify();
+        
     }
 
     public function setConfig($ak, $service) {
@@ -42,5 +43,5 @@ class BaiduMap
         $this->rectify->Rectify($points);
     }
 
-    
+
 }
