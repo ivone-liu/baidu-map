@@ -22,19 +22,9 @@ use GuzzleHttp\Client;
  */
 class TrackUpload
 {
-
-    protected $ak;
-    protected $service_id;
-    protected $entity;
-
     private $req_single_url = "http://yingyan.baidu.com/api/v3/track/addpoint";
     private $req_mutil_url = "http://yingyan.baidu.com/api/v3/track/addpoints";
 
-    public function __construct($ak, $service_id, $entity) {
-        $this->ak = $ak;
-        $this->service_id = $service_id;
-        $this->entity = $entity;
-    }
 
     /**
      * Desc: 加点
@@ -43,11 +33,11 @@ class TrackUpload
      * Time: 15:14
      * @param array $point, 经纬度 [longitude, latitude]
      */
-    public function addpoint(Array $point, $time, $coord = 'wgs84') {
+    public function addpoint($ak, $service, $entity, Array $point, $time, $coord = 'wgs84') {
         $package = [
-            'ak'                =>  $this->ak,
-            'service_id'        =>  $this->service_id,
-            'entity_name'       =>  $this->entity,
+            'ak'                =>  $ak,
+            'service_id'        =>  $service,
+            'entity_name'       =>  $entity,
             'latitude'          =>  $point[1],
             'longitude'         =>  $point[0],
             'loc_time'          =>  $time,
