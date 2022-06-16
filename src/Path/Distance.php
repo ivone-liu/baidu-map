@@ -24,7 +24,7 @@ class Distance
     }
 
     public function Distance($start_time, $end_time) {
-        $baidu_resp = curl_post($this->track_url, [
+        $baidu_resp = curl_get($this->track_url, [
             'ak'                =>  $this->ak,
             'service_id'        =>  $start_time,
             'entity_name'       =>  $this->entity,
