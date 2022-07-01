@@ -8,8 +8,6 @@
 
 namespace BaiduMap\Coord;
 
-use Coords\Rectangle;
-
 class Coordtransform
 {
 
